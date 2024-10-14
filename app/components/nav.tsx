@@ -13,6 +13,9 @@ const navItems = {
   '/contact': {
     name: 'Contact'
   },
+  '/function-plotting': {
+    name: 'Function Plotting'
+  },
 }
 
 export function Navbar() {
