@@ -6,23 +6,13 @@ export default function Services() {
 
         <div className="grid md:grid-cols-2 gap-6">
           <div className="p-6 bg-gray-900 shadow rounded-2xl">
-            <h2 className="text-2xl font-semibold mb-2">Web Development</h2>
-            <p className="text-gray-300">Building responsive, fast, and modern web applications using Next.js and React.</p>
+            <h2 className="text-2xl font-semibold mb-2">Data Consulting</h2>
+            <p className="text-gray-300">You bring the data, we analyse and provide insights to improve your overview and decision-making.</p>
           </div>
 
           <div className="p-6 bg-gray-900 shadow rounded-2xl">
-            <h2 className="text-2xl font-semibold mb-2">UI/UX Design</h2>
-            <p className="text-gray-300">Designing intuitive user experiences and clean, elegant interfaces.</p>
-          </div>
-
-          <div className="p-6 bg-gray-900 shadow rounded-2xl">
-            <h2 className="text-2xl font-semibold mb-2">SEO Optimization</h2>
-            <p className="text-gray-300">Improving search visibility with best‑practice content and technical SEO.</p>
-          </div>
-
-          <div className="p-6 bg-gray-900 shadow rounded-2xl">
-            <h2 className="text-2xl font-semibold mb-2">Consulting</h2>
-            <p className="text-gray-300">Helping you choose the right tech stack and architecture for your product.</p>
+            <h2 className="text-2xl font-semibold mb-2">Customized Monitoring</h2>
+            <p className="text-gray-300">We build the data architecture and monitoring tools tailored to your needs.</p>
           </div>
         </div>
       </section>
