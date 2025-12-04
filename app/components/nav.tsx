@@ -2,19 +2,19 @@ import Link from 'next/link'
 
 const navItems = {
   '/': {
-    name: 'Home',
+    name: 'Startseite',
   },
   '/blog': {
     name: 'Blog',
   },
   '/services': {
-    name: 'Services'
+    name: 'Angebote'
   },
   // 'https://vercel.com/templates/next.js/portfolio-starter-kit': {
   //   name: 'Deploy',
   // },
   '/contact': {
-    name: 'Contact'
+    name: 'Kontakt'
   },
   '/function-plotting': {
     name: 'Function Plotting'
