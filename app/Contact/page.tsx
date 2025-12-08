@@ -5,7 +5,7 @@ const Contact: React.FC = () => {
     <div>
       <h1>Wir freuen uns auf Ihre Nachricht.</h1>
       <p></p>
-      {/* You can add a form or more content here */}
+      {/* Hier kann ein Formular oder weiterer Inhalt ergänzt werden */}
     </div>
   );
 };

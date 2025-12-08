@@ -17,7 +17,7 @@ const navItems = {
     name: 'Kontakt'
   },
   '/function-plotting': {
-    name: 'Function Plotting'
+    name: 'Funktionsplot'
   },
 }
 
