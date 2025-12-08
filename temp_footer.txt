@@ -27,7 +27,7 @@ export default function Footer() {
             href="/rss"
           >
             <ArrowIcon />
-            <p className="ml-2 h-7">RSS</p>
+            <p className="ml-2 h-7">rss</p>
           </a>
         </li>
         <li>
@@ -38,7 +38,7 @@ export default function Footer() {
             href="https://github.com/vercel/next.js"
           >
             <ArrowIcon />
-            <p className="ml-2 h-7">GitHub</p>
+            <p className="ml-2 h-7">github</p>
           </a>
         </li>
         <li>
@@ -49,13 +49,14 @@ export default function Footer() {
             href="https://vercel.com/templates/next.js/portfolio-starter-kit"
           >
             <ArrowIcon />
-            <p className="ml-2 h-7">Quellcode ansehen</p>
+            <p className="ml-2 h-7">view source</p>
           </a>
         </li>
       </ul>
       <p className="mt-8 text-neutral-600 dark:text-neutral-300">
-        {'\u0416\u0418'} {new Date().getFullYear()} MIT-Lizenz
+        © {new Date().getFullYear()} MIT Licensed
       </p>
     </footer>
   )
 }
+
