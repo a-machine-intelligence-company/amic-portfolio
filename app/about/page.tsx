@@ -89,13 +89,13 @@ export default function AboutPage() {
               key={member.name}
               className="group flex h-full flex-col gap-6 rounded-3xl border border-white/10 bg-white/5 p-6 shadow-[0_20px_60px_-50px_rgba(0,0,0,0.7)] backdrop-blur transition hover:-translate-y-1 hover:border-white/30 hover:bg-white/10"
             >
-              <div className="flex items-center gap-4">
-                <div className="relative h-20 w-20 overflow-hidden rounded-2xl ring-1 ring-white/20">
+              <div className="flex flex-col gap-4">
+                <div className="relative h-48 w-full overflow-hidden rounded-2xl ring-1 ring-white/15 md:h-56">
                   <Image
                     src={member.imageUrl}
                     alt={member.name}
                     fill
-                    sizes="80px"
+                    sizes="(min-width: 768px) 560px, 100vw"
                     className="object-cover"
                   />
                 </div>
