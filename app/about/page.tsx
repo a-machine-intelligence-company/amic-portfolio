@@ -71,15 +71,14 @@ export default function AboutPage() {
 
         <div className="relative space-y-4">
           <p className="text-xs uppercase tracking-[0.4em] text-neutral-400">
-            Ueber uns
+            Über uns
           </p>
           <h1 className="text-4xl font-semibold tracking-tight text-white md:text-5xl">
-            Datenarbeit mit Haltung und Hands-on Mentalitaet
+            Wir gestalten Produkte und Entscheidungen durch Daten.
           </h1>
           <p className="max-w-3xl text-lg text-neutral-200">
-            Wir sind ein kleines Team mit Fokus auf maschinelles Lernen,
-            Nachhaltigkeit und sozialem Fortschritt. Unsere Arbeit verbindet
-            praezise Analyse mit klaren Produktentscheidungen.
+            Wir sind ein kleines Team mit Fokus auf datenbasierten Systemen um die Prozesse, Entscheidungen und 
+            Produkte unserer Auftraggeber zu verbessern.
           </p>
         </div>
 
@@ -165,13 +164,13 @@ export default function AboutPage() {
               </h3>
             </div>
             <div className="text-sm text-neutral-200">
-              Wir charakterisieren Teams nicht nur ueber Rollen, sondern ueber
+              Wir charakterisieren Teams nicht nur über Rollen, sondern über
               die Wirkung, die sie liefern: klare Erkenntnisse, belastbare
               Systeme und messbare Fortschritte.
             </div>
             <div className="text-sm text-neutral-200">
-              Diese Haltung uebersetzen wir in Projekte, die Menschen und
-              Prozesse verbinden und langfristig tragfaehig sind.
+              Diese Haltung übersetzen wir in Projekte, die Menschen und
+              Prozesse verbinden und langfristig tragfähig sind.
             </div>
           </div>
         </section>
