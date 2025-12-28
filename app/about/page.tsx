@@ -3,11 +3,11 @@ import Image from 'next/image'
 const teamMembers = [
   {
     name: 'Roman Weiss',
-    role: 'Data Strategist',
-    focus: 'Insights, die Wirkung zeigen',
+    role: 'Romans Rolle',
+    focus: 'Romans Fokus',
     bio:
-      'Verbindet Datenanalyse mit Nachhaltigkeit und hilft Teams, aus komplexen Signalen klare Entscheidungen abzuleiten.',
-    traits: ['Analytisch', 'Wirkungsorientiert', 'Klar in der Kommunikation'],
+      'Romans bio',
+    traits: ['Eigenschaft 1', 'Eigenschaft 2', 'Eigenschaft 3'],
     imageUrl: '/about/roman.jpg',
     socials: {
       linkedin: 'https://www.linkedin.com',
@@ -17,16 +17,16 @@ const teamMembers = [
   },
   {
     name: 'Severin Weiss',
-    role: 'Systems Builder',
-    focus: 'Skalierbare Datenprodukte',
+    // role: 'Systems Builder',
+    focus: 'Datenprodukte & KI Verständlichkeit',
     bio:
-      'Entwickelt robuste Architekturen und Monitoring, damit Datenprodukte zuverlaessig wachsen und messbar bleiben.',
-    traits: ['Systemisch', 'Pragmatisch', 'Zukunftsorientiert'],
+      'Entwickelt robuste Algorithmen und Monitoring, damit Datenprodukte zuverlässig wachsen und verständlich werden.',
+    traits: ['Lösungsorientiert', 'Individuell', 'Ganzheitlich'],
     imageUrl: '/about/severin.jpg',
     socials: {
-      linkedin: 'https://www.linkedin.com',
-      github: 'https://github.com',
-      email: 'mailto:hello@yourdomain.com',
+      linkedin: 'https://www.linkedin.com/in/severin-weiss-32a44422a/',
+      github: 'https://github.com/weisev-repo',
+      email: 'mailto:se_weiss@protonmail.com',
     },
   },
 ]
