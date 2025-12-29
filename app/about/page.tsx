@@ -3,16 +3,16 @@ import Image from 'next/image'
 const teamMembers = [
   {
     name: 'Roman Weiss',
-    role: 'Romans Rolle',
-    focus: 'Romans Fokus',
+    // role: 'Romans Rolle',
+    focus: 'datenbasierte Optimierung & modellbasierte Entscheidungen',
     bio:
-      'Romans bio',
-    traits: ['Eigenschaft 1', 'Eigenschaft 2', 'Eigenschaft 3'],
+      'Arbeitet an der Schnittstelle von Modellierung, Datenanalyse und Praxis, um fundierte und robuste Entscheidungen zu ermöglichen.',
+    traits: ['Strukturiert', 'Neugierig', 'Praxisnah'],
     imageUrl: '/about/roman.jpg',
     socials: {
-      linkedin: 'https://www.linkedin.com',
-      github: 'https://github.com',
-      email: 'mailto:hello@yourdomain.com',
+      linkedin: 'https://www.linkedin.com/in/roman-weiss-69929a303/?trk=opento_sprofile_details',
+      github: 'https://github.com/romanweiss123',
+      email: 'mailto:roman.weiss@hotmail.com',
     },
   },
   {
