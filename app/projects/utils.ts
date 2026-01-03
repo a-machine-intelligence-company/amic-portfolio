@@ -6,6 +6,7 @@ type Metadata = {
   publishedAt: string
   summary: string
   image?: string
+  tags?: string[]
 }
 
 function parseFrontmatter(fileContent: string) {
@@ -19,7 +20,14 @@ function parseFrontmatter(fileContent: string) {
   frontMatterLines.forEach((line) => {
     let [key, ...valueArr] = line.split(': ')
     let value = valueArr.join(': ').trim()
-    value = value.replace(/^['"](.*)['"]$/, '$1') // Remove quotes
+    value = value.replace(/^['"](.*)['"]$/, '$1')
+    if (key.trim() === 'tags') {
+      metadata.tags = value
+        .split(',')
+        .map((tag) => tag.trim())
+        .filter(Boolean)
+      return
+    }
     metadata[key.trim() as keyof Metadata] = value
   })
 
@@ -49,8 +57,8 @@ function getMDXData(dir) {
   })
 }
 
-export function getBlogPosts() {
-  return getMDXData(path.join(process.cwd(), 'app', 'blog', 'posts'))
+export function getProjectPosts() {
+  return getMDXData(path.join(process.cwd(), 'app', 'projects', 'posts'))
 }
 
 export function formatDate(date: string, includeRelative = false) {
