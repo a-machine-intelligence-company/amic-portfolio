@@ -11,7 +11,7 @@ const navItems = {
     name: 'Projekte',
   },
   '/about': {
-    name: 'Iober uns',
+    name: 'Über uns',
   },
   '/services': {
     name: 'Angebote'
