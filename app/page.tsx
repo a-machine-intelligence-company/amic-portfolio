@@ -1,4 +1,4 @@
-import { BlogPosts } from 'app/components/posts'
+import Link from 'next/link'
 
 export default function Page() {
   return (
@@ -12,6 +12,21 @@ export default function Page() {
           Wechselspiel zwischen maschinellem Lernen, Datenanalysen,
           Nachhaltigkeit und gesellschaftlichem Fortschritt.
         </p>
+        <div className="mt-6 space-y-2">
+          <h2 className="text-lg font-semibold tracking-tight">Kontakt</h2>
+          <p className="text-sm text-neutral-600 dark:text-neutral-400">
+            Lassen Sie uns Ihr Vorhaben in die Tat umsetzen - schreiben Sie uns
+            kurz, wir melden uns zeitnah.
+          </p>
+          <div>
+            <Link
+              href="/contact"
+              className="inline-flex items-center rounded-full border border-neutral-300 px-4 py-2 text-sm font-semibold text-neutral-900 transition hover:border-neutral-900 hover:text-neutral-700 dark:border-neutral-700 dark:text-neutral-100 dark:hover:border-neutral-400 dark:hover:text-neutral-200"
+            >
+              Kontakt aufnehmen
+            </Link>
+          </div>
+        </div>
         <div className="mt-8">
           <h2 className="mb-4 text-xl font-semibold tracking-tight">Häufige gestellte Fragen</h2>
           <div className="space-y-3">
@@ -64,9 +79,6 @@ export default function Page() {
             </details>
           </div>
         </div>
-      </div>
-      <div className="my-8">
-        <BlogPosts />
       </div>
     </section>
   )
