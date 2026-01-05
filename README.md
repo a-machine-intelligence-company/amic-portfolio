@@ -40,3 +40,38 @@ pnpm dev
 ```
 
 Deploy it to the cloud with [Vercel](https://vercel.com/templates) ([Documentation](https://nextjs.org/docs/app/building-your-application/deploying)).
+
+## Local Setup
+
+### Requirements
+
+- Node.js 18+
+- pnpm
+
+### Install
+
+```bash
+pnpm install
+```
+
+### Environment Variables
+
+Create a `.env.local` file at the project root:
+
+```bash
+GMAIL_USER=yourname@gmail.com
+GMAIL_APP_PASSWORD=your-16-char-app-password
+CONTACT_TO_EMAIL=you@example.com
+```
+
+Notes:
+- For Gmail, enable 2-Step Verification and generate an App Password.
+- `CONTACT_TO_EMAIL` can be the same as `GMAIL_USER`.
+
+### Run
+
+```bash
+pnpm dev
+```
+
+Open `http://localhost:3000`.
