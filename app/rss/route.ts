@@ -2,7 +2,7 @@ import { baseUrl } from 'app/sitemap'
 import { getBlogPosts } from 'app/blog/utils'
 
 export async function GET() {
-  let allBlogs = await getBlogPosts()
+  let allBlogs = (await getBlogPosts()).filter((post) => !post.metadata.hidde)
 
   const itemsXml = allBlogs
     .sort((a, b) => {

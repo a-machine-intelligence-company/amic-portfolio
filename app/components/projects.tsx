@@ -2,7 +2,7 @@ import Link from 'next/link'
 import { formatDate, getProjectPosts } from 'app/projects/utils'
 
 export function ProjectPosts() {
-  let allProjects = getProjectPosts()
+  let allProjects = getProjectPosts().filter((project) => !project.metadata.hidde)
 
   return (
     <div>

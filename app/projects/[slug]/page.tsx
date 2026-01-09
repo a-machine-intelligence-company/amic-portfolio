@@ -4,7 +4,7 @@ import { formatDate, getProjectPosts } from 'app/projects/utils'
 import { baseUrl } from 'app/sitemap'
 
 export async function generateStaticParams() {
-  let projects = getProjectPosts()
+  let projects = getProjectPosts().filter((project) => !project.metadata.hidde)
 
   return projects.map((project) => ({
     slug: project.slug,
@@ -12,7 +12,9 @@ export async function generateStaticParams() {
 }
 
 export function generateMetadata({ params }) {
-  let project = getProjectPosts().find((item) => item.slug === params.slug)
+  let project = getProjectPosts().find(
+    (item) => item.slug === params.slug && !item.metadata.hidde
+  )
   if (!project) {
     return
   }
@@ -53,7 +55,9 @@ export function generateMetadata({ params }) {
 }
 
 export default function Project({ params }) {
-  let project = getProjectPosts().find((item) => item.slug === params.slug)
+  let project = getProjectPosts().find(
+    (item) => item.slug === params.slug && !item.metadata.hidde
+  )
 
   if (!project) {
     notFound()

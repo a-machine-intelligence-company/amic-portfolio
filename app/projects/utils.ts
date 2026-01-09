@@ -7,6 +7,7 @@ type Metadata = {
   summary: string
   image?: string
   tags?: string[]
+  hidde?: boolean
 }
 
 function parseFrontmatter(fileContent: string) {
@@ -21,6 +22,10 @@ function parseFrontmatter(fileContent: string) {
     let [key, ...valueArr] = line.split(': ')
     let value = valueArr.join(': ').trim()
     value = value.replace(/^['"](.*)['"]$/, '$1')
+    if (key.trim() === 'hidde') {
+      metadata.hidde = value === 'true'
+      return
+    }
     if (key.trim() === 'tags') {
       metadata.tags = value
         .split(',')
@@ -30,6 +35,10 @@ function parseFrontmatter(fileContent: string) {
     }
     metadata[key.trim() as keyof Metadata] = value
   })
+
+  if (metadata.hidde === undefined) {
+    metadata.hidde = false
+  }
 
   return { metadata: metadata as Metadata, content }
 }
