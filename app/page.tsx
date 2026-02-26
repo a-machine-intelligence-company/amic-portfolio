@@ -4,7 +4,7 @@ export default function Page() {
   return (
     <section>
       <h1 className="mb-8 text-2xl font-semibold tracking-tighter">
-        Unser Portfolio
+        AMIC
       </h1>
       <div className="my-8">
         <p className="text-base text-neutral-700 dark:text-neutral-300">
@@ -15,8 +15,7 @@ export default function Page() {
         <div className="mt-6 space-y-2">
           <h2 className="text-lg font-semibold tracking-tight">Kontakt</h2>
           <p className="text-sm text-neutral-600 dark:text-neutral-400">
-            Lassen Sie uns Ihr Vorhaben in die Tat umsetzen - schreiben Sie uns
-            kurz, wir melden uns zeitnah.
+            Lassen Sie uns Ihr Vorhaben in die Tat umsetzen - schreiben Sie uns, wir freuen uns über Ihre Nachricht.
           </p>
           <div>
             <Link
@@ -39,7 +38,7 @@ export default function Page() {
               </summary>
               <p className="mt-3 text-sm text-neutral-600 dark:text-neutral-400">
                 Wir arbeiten an praxisnahen Anwendungen rund um Daten und maschinellem Lernen
-                 - von Beratung, Prototypen bis zu produktiven Lösungen.
+                 - von Strategieentwicklung, Prototypen bis zu produktiven Lösungen.
               </p>
             </details>
             <details className="group rounded-md border border-neutral-200 p-4 dark:border-neutral-800">

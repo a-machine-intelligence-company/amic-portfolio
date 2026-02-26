@@ -1,18 +1,18 @@
 const services = [
   {
-    title: 'Datenpotential-Analyse',
+    title: 'Datenwert-Monitoring',
     description:
-      'Unternehmen sammeln im täglichen Betrieb Daten über ihre eigenen Tätigkeiten und Kompetenzen. Wir bieten massgeschneiderte Lösungen um Datenmengen zu strukturieren, eine maschinelle Analyse und Aufbereitung, sodass die gewonnen Erkenntnisse menschlich interpretiert werden können. Wir helfen Ihnen den Wert Ihrer Daten zu nutzen und optimierte Entscheidungen für Ihr Unternehmen zu treffen.',
+      'Wir bieten massgeschneiderte Lösungen um Datenmengen zu strukturieren, eine maschinelle Analyse und Aufbereitung, sodass die gewonnen Erkenntnisse menschlich interpretiert werden können. Wir helfen Ihnen den Wert Ihrer Daten zu nutzen und optimierte Entscheidungen für Ihr Unternehmen zu treffen.',
   },
   {
-    title: 'KI Modell Entwicklung',
+    title: 'Handlungsplan-Entwicklung',
     description:
-      'Wir entwickeln passgenaue KI-Modelle für Ihre Datenlandschaft, von der Konzeptphase über das Training bis zur verlässlichen Nutzung im Alltag.',
+      'Wir entwickeln einen passgenauen Handlungsplan für Ihre Datenlandschaft, von der Konzeptphase über die den Architekturaufbau bis zur Implementierung. Unser Fokus liegt auf der Entwicklung von Lösungen, die nicht nur technisch robust, sondern auch verständlich und nachhaltig sind.',
   },
   {
-    title: 'KI Architektur Engineering',
+    title: 'Begleitung und Performance-Monitoring',
     description:
-      'Wir planen skalierbare KI-Architekturen, die Datenpipelines, Modelle und Betrieb verbinden, damit Lösungen nachhaltig wachsen und wartbar bleiben.',
+      'Wir begleiten Sie im Betrieb. Es ist zentral die Leistung Ihrer Datenlösungen kontinuierlich zu überwachen und zu optimieren, um sicherzustellen, dass sie den gewünschten Mehrwert für Sie liefern.',
   },
 ]
 
@@ -22,15 +22,14 @@ export default function Services() {
       <section className="relative mx-auto flex w-full max-w-6xl flex-col gap-12">
         <div className="space-y-4">
           <p className="text-xs uppercase tracking-[0.4em] text-neutral-400">
-            Services
+            Angebot
           </p>
           <h1 className="text-4xl font-semibold tracking-tight text-white md:text-5xl">
             Leistungen mit Fokus auf Wirkung und Klarheit.
           </h1>
           <p className="max-w-3xl text-lg text-neutral-200">
-            Wir helfen Unternehmen dabei, Daten sinnvoll zu strukturieren,
-            maschinell auszuwerten und die Ergebnisse so aufzubereiten, dass
-            Entscheidungen sicherer und schneller werden.
+            Unternehmen sammeln im täglichen Betrieb Daten über ihre eigenen Tätigkeiten und Kompetenzen. Wir helfen Ihnen dabei, Ihre Datenwerte zu analysieren, sinnvoll zu strukturieren,
+            und entwickeln einen klaren Handlungsplan anhand Ihrer Bedürfnisse und Ziele.
           </p>
         </div>
 
