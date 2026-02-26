@@ -2,7 +2,7 @@ const services = [
   {
     title: 'Datenwert-Monitoring',
     description:
-      'Unternehmen sammeln im täglichen Betrieb Daten über ihre eigenen Tätigkeiten und Kompetenzen. Wir bieten massgeschneiderte Lösungen um Datenmengen zu strukturieren, eine maschinelle Analyse und Aufbereitung, sodass die gewonnen Erkenntnisse menschlich interpretiert werden können. Wir helfen Ihnen den Wert Ihrer Daten zu nutzen und optimierte Entscheidungen für Ihr Unternehmen zu treffen.',
+      'Wir bieten massgeschneiderte Lösungen um Datenmengen zu strukturieren, eine maschinelle Analyse und Aufbereitung, sodass die gewonnen Erkenntnisse menschlich interpretiert werden können. Wir helfen Ihnen den Wert Ihrer Daten zu nutzen und optimierte Entscheidungen für Ihr Unternehmen zu treffen.',
   },
   {
     title: 'Handlungsplan-Entwicklung',
@@ -28,7 +28,7 @@ export default function Services() {
             Leistungen mit Fokus auf Wirkung und Klarheit.
           </h1>
           <p className="max-w-3xl text-lg text-neutral-200">
-            Wir helfen Ihnen dabei, Ihre Datenwerte zu analysieren, sinnvoll zu strukturieren,
+            Unternehmen sammeln im täglichen Betrieb Daten über ihre eigenen Tätigkeiten und Kompetenzen. Wir helfen Ihnen dabei, Ihre Datenwerte zu analysieren, sinnvoll zu strukturieren,
             und entwickeln einen klaren Handlungsplan anhand Ihrer Bedürfnisse und Ziele.
           </p>
         </div>
