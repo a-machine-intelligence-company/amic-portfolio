@@ -54,7 +54,7 @@ export default function Footer() {
         </li>
       </ul>
       <p className="mt-8 text-neutral-600 dark:text-neutral-300">
-        {'\u0416\u0418'} {new Date().getFullYear()} MIT-Lizenz
+        © {new Date().getFullYear()} MIT-Lizenz
       </p>
     </footer>
   )

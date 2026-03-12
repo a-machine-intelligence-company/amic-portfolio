@@ -9,6 +9,7 @@ const teamMembers = [
       'Arbeitet an der Schnittstelle von Modellierung, Datenanalyse und Praxis, um fundierte und robuste Entscheidungen zu ermöglichen.',
     traits: ['Strukturiert', 'Neugierig', 'Praxisnah'],
     imageUrl: '/about/roman.jpg',
+    imagePosition: 'center 28%',
     socials: {
       linkedin: 'https://www.linkedin.com/in/roman-weiss-69929a303/?trk=opento_sprofile_details',
       github: 'https://github.com/romanweiss123',
@@ -23,6 +24,7 @@ const teamMembers = [
       'Entwickelt robuste Algorithmen und Monitoring, damit Datenprodukte zuverlässig wachsen und verständlich werden.',
     traits: ['Lösungsorientiert', 'Individuell', 'Ganzheitlich'],
     imageUrl: '/about/severin.jpg',
+    imagePosition: 'center 42%',
     socials: {
       linkedin: 'https://www.linkedin.com/in/severin-weiss-32a44422a/',
       github: 'https://github.com/weisev-repo',
@@ -66,115 +68,113 @@ function EmailIcon() {
 
 export default function AboutPage() {
   return (
-    <main className="min-h-screen bg-black px-6 py-12 text-white">
-      <section className="relative mx-auto flex w-full max-w-6xl flex-col gap-12 overflow-hidden">
+    <section className="page-section text-neutral-900 dark:text-neutral-100">
+      <div className="relative space-y-4">
+        <p className="text-xs uppercase tracking-[0.4em] text-neutral-500">
+          Über uns
+        </p>
+        <h1 className="text-4xl font-semibold tracking-tight md:text-5xl">
+          Wir gestalten Produkte und Entscheidungen durch Daten.
+        </h1>
+        <p className="max-w-3xl text-lg text-neutral-700 dark:text-neutral-300">
+          Wir sind ein kleines Team mit Fokus auf datenbasierten Systemen um die
+          Prozesse, Entscheidungen und Produkte unserer Auftraggeber zu verbessern.
+        </p>
+      </div>
 
-        <div className="relative space-y-4">
-          <p className="text-xs uppercase tracking-[0.4em] text-neutral-400">
-            Über uns
-          </p>
-          <h1 className="text-4xl font-semibold tracking-tight text-white md:text-5xl">
-            Wir gestalten Produkte und Entscheidungen durch Daten.
-          </h1>
-          <p className="max-w-3xl text-lg text-neutral-200">
-            Wir sind ein kleines Team mit Fokus auf datenbasierten Systemen um die Prozesse, Entscheidungen und 
-            Produkte unserer Auftraggeber zu verbessern.
-          </p>
-        </div>
-
-        <div className="grid gap-6 md:grid-cols-2">
-          {teamMembers.map((member) => (
-            <article
-              key={member.name}
-              className="group flex h-full flex-col gap-6 rounded-3xl border border-white/10 bg-white/5 p-6 shadow-[0_20px_60px_-50px_rgba(0,0,0,0.7)] backdrop-blur transition hover:-translate-y-1 hover:border-white/30 hover:bg-white/10"
-            >
-              <div className="flex flex-col gap-4">
-                <div className="relative h-48 w-full overflow-hidden rounded-2xl ring-1 ring-white/15 md:h-56">
-                  <Image
-                    src={member.imageUrl}
-                    alt={member.name}
-                    fill
-                    sizes="(min-width: 768px) 560px, 100vw"
-                    className="object-cover"
-                  />
-                </div>
-                <div>
-                  <h2 className="text-xl font-semibold text-white">
-                    {member.name}
-                  </h2>
-                  <p className="text-sm text-neutral-300">{member.role}</p>
-                  <p className="text-sm font-medium text-neutral-200">
-                    {member.focus}
-                  </p>
-                </div>
+      <div className="grid gap-6 md:grid-cols-2">
+        {teamMembers.map((member) => (
+          <article
+            key={member.name}
+            className="group flex h-full flex-col gap-6 section-card transition hover:-translate-y-1 hover:border-neutral-300 dark:hover:border-neutral-700"
+          >
+            <div className="flex flex-col gap-4">
+              <div className="relative h-56 overflow-hidden rounded-2xl ring-1 ring-neutral-200 dark:ring-neutral-800 sm:h-64">
+                <Image
+                  src={member.imageUrl}
+                  alt={member.name}
+                  fill
+                  sizes="(min-width: 1024px) 32rem, (min-width: 768px) 46vw, 100vw"
+                  className="object-cover"
+                  style={{ objectPosition: member.imagePosition }}
+                />
               </div>
-
-              <p className="text-neutral-200">{member.bio}</p>
-
-              <div className="flex flex-wrap gap-2">
-                {member.traits.map((trait) => (
-                  <span
-                    key={trait}
-                    className="rounded-full border border-white/15 px-3 py-1 text-xs font-medium text-neutral-200"
-                  >
-                    {trait}
-                  </span>
-                ))}
+              <div>
+                <h2 className="text-xl font-semibold">{member.name}</h2>
+                <p className="text-sm text-neutral-600 dark:text-neutral-400">
+                  {member.role}
+                </p>
+                <p className="text-sm font-medium text-neutral-700 dark:text-neutral-300">
+                  {member.focus}
+                </p>
               </div>
+            </div>
 
-              <div className="mt-auto flex flex-wrap items-center gap-3 text-sm">
-                <a
-                  href={member.socials.linkedin}
-                  className="inline-flex items-center gap-2 rounded-full border border-white/15 px-3 py-2 text-xs font-semibold text-neutral-200 transition hover:border-white/40 hover:text-white"
-                  target="_blank"
-                  rel="noreferrer"
-                >
-                  <LinkedinIcon />
-                  LinkedIn
-                </a>
-                <a
-                  href={member.socials.github}
-                  className="inline-flex items-center gap-2 rounded-full border border-white/15 px-3 py-2 text-xs font-semibold text-neutral-200 transition hover:border-white/40 hover:text-white"
-                  target="_blank"
-                  rel="noreferrer"
-                >
-                  <GithubIcon />
-                  GitHub
-                </a>
-                <a
-                  href={member.socials.email}
-                  className="inline-flex items-center gap-2 rounded-full border border-white/15 px-3 py-2 text-xs font-semibold text-neutral-200 transition hover:border-white/40 hover:text-white"
-                >
-                  <EmailIcon />
-                  Email
-                </a>
-              </div>
-            </article>
-          ))}
-        </div>
+            <p className="text-neutral-700 dark:text-neutral-300">{member.bio}</p>
 
-        <section className="rounded-3xl bg-white/5 px-8 py-10 text-white ring-1 ring-white/10">
-          <div className="grid gap-6 md:grid-cols-3">
-            <div>
-              <p className="text-sm uppercase tracking-[0.25em] text-neutral-400">
-                Unser Ansatz
-              </p>
-              <h3 className="mt-3 text-2xl font-semibold">
-                Klarheit, Wirkung, Nachhaltigkeit
-              </h3>
+            <div className="flex flex-wrap gap-2">
+              {member.traits.map((trait) => (
+                <span
+                  key={trait}
+                  className="rounded-full border border-neutral-200 dark:border-neutral-800 px-3 py-1 text-xs font-medium text-neutral-700 dark:text-neutral-300"
+                >
+                  {trait}
+                </span>
+              ))}
             </div>
-            <div className="text-sm text-neutral-200">
-              Wir charakterisieren Teams nicht nur über Rollen, sondern über
-              die Wirkung, die sie liefern: klare Erkenntnisse, belastbare
-              Systeme und messbare Fortschritte.
+
+            <div className="mt-auto flex flex-wrap items-center gap-3 text-sm">
+              <a
+                href={member.socials.linkedin}
+                className="inline-flex items-center gap-2 rounded-full border border-neutral-300 dark:border-neutral-700 px-3 py-2 text-xs font-semibold text-neutral-700 dark:text-neutral-200 transition hover:border-neutral-400 dark:hover:border-neutral-500"
+                target="_blank"
+                rel="noreferrer"
+              >
+                <LinkedinIcon />
+                LinkedIn
+              </a>
+              <a
+                href={member.socials.github}
+                className="inline-flex items-center gap-2 rounded-full border border-neutral-300 dark:border-neutral-700 px-3 py-2 text-xs font-semibold text-neutral-700 dark:text-neutral-200 transition hover:border-neutral-400 dark:hover:border-neutral-500"
+                target="_blank"
+                rel="noreferrer"
+              >
+                <GithubIcon />
+                GitHub
+              </a>
+              <a
+                href={member.socials.email}
+                className="inline-flex items-center gap-2 rounded-full border border-neutral-300 dark:border-neutral-700 px-3 py-2 text-xs font-semibold text-neutral-700 dark:text-neutral-200 transition hover:border-neutral-400 dark:hover:border-neutral-500"
+              >
+                <EmailIcon />
+                Email
+              </a>
             </div>
-            <div className="text-sm text-neutral-200">
-              Diese Haltung übersetzen wir in Projekte, die Menschen und
-              Prozesse verbinden und langfristig tragfähig sind.
-            </div>
+          </article>
+        ))}
+      </div>
+
+      <section className="section-card">
+        <div className="grid gap-6 md:grid-cols-3">
+          <div>
+            <p className="text-sm uppercase tracking-[0.25em] text-neutral-500">
+              Unser Ansatz
+            </p>
+            <h3 className="mt-3 text-2xl font-semibold">
+              Klarheit, Wirkung, Nachhaltigkeit
+            </h3>
           </div>
-        </section>
+          <div className="text-sm text-neutral-700 dark:text-neutral-300">
+            Wir charakterisieren Teams nicht nur über Rollen, sondern über die
+            Wirkung, die sie liefern: klare Erkenntnisse, belastbare Systeme und
+            messbare Fortschritte.
+          </div>
+          <div className="text-sm text-neutral-700 dark:text-neutral-300">
+            Diese Haltung übersetzen wir in Projekte, die Menschen und Prozesse
+            verbinden und langfristig tragfähig sind.
+          </div>
+        </div>
       </section>
-    </main>
+    </section>
   )
 }

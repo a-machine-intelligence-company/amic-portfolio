@@ -2,11 +2,11 @@ import Link from 'next/link'
 
 export default function Page() {
   return (
-    <section>
-      <h1 className="mb-8 text-2xl font-semibold tracking-tighter">
+    <section className="page-section">
+      <h1 className="page-title">
         AMIC
       </h1>
-      <div className="my-8">
+      <div className="space-y-8">
         <p className="text-base text-neutral-700 dark:text-neutral-300">
           Wir sind Roman und Severin Weiss und realisieren Projekte im
           Wechselspiel zwischen maschinellem Lernen, Datenanalysen,
