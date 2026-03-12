@@ -64,7 +64,7 @@ export default function Project({ params }) {
   }
 
   return (
-    <section>
+    <section className="page-section">
       <script
         type="application/ld+json"
         suppressHydrationWarning
@@ -88,19 +88,19 @@ export default function Project({ params }) {
           }),
         }}
       />
-      <h1 className="title font-semibold text-2xl tracking-tighter">
+      <h1 className="page-title">
         {project.metadata.title}
       </h1>
-      <div className="flex justify-between items-center mt-2 mb-8 text-sm">
+      <div className="flex flex-wrap items-center justify-between gap-2 text-sm">
         <p className="text-sm text-neutral-600 dark:text-neutral-400">
           {formatDate(project.metadata.publishedAt)}
         </p>
         {project.metadata.tags?.length ? (
-          <div className="flex flex-wrap gap-2 text-xs text-neutral-600 dark:text-neutral-400">
+          <div className="flex flex-wrap gap-2">
             {project.metadata.tags.map((tag) => (
               <span
                 key={tag}
-                className="rounded border border-neutral-200 px-2 py-0.5 dark:border-neutral-800"
+                className="tag-chip"
               >
                 {tag}
               </span>
@@ -108,7 +108,7 @@ export default function Project({ params }) {
           </div>
         ) : null}
       </div>
-      <article className="prose">
+      <article className="prose max-w-none">
         <CustomMDX source={project.content} />
       </article>
     </section>

@@ -121,9 +121,9 @@ const Contact: React.FC = () => {
   }
 
   return (
-    <section className="space-y-6">
+    <section className="page-section">
       <div>
-        <h1 className="text-2xl font-semibold tracking-tighter">
+        <h1 className="page-title">
           Wir freuen uns auf Ihre Nachricht.
         </h1>
         <p className="mt-2 text-neutral-600 dark:text-neutral-400">

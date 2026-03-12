@@ -48,6 +48,33 @@ function RoundedImage(props) {
   return <Image alt={props.alt} className="rounded-lg" {...props} />
 }
 
+function Paragraph({ children }) {
+  return <p className="my-4 text-neutral-700 dark:text-neutral-300">{children}</p>
+}
+
+function List({ children, ordered }) {
+  let Element = ordered ? 'ol' : 'ul'
+  let classes = ordered
+    ? 'list-decimal pl-6 space-y-2'
+    : 'list-disc pl-6 space-y-2'
+
+  return <Element className={classes}>{children}</Element>
+}
+
+function Blockquote({ children }) {
+  return (
+    <blockquote className="mt-6 rounded-2xl border-l-4 border-neutral-300 bg-neutral-50 p-4 dark:border-neutral-700 dark:bg-neutral-900/40">
+      {children}
+    </blockquote>
+  )
+}
+
+function SubtitlelessHeading({ children }) {
+  return (
+    <p className="my-4 text-neutral-700 dark:text-neutral-300">{children}</p>
+  )
+}
+
 function Code({ children, ...props }) {
   let codeHTML = highlight(children)
   return <code dangerouslySetInnerHTML={{ __html: codeHTML }} {...props} />
@@ -88,11 +115,15 @@ function createHeading(level) {
 
 let components = {
   h1: createHeading(1),
-  h2: createHeading(2),
-  h3: createHeading(3),
-  h4: createHeading(4),
-  h5: createHeading(5),
-  h6: createHeading(6),
+  h2: SubtitlelessHeading,
+  h3: SubtitlelessHeading,
+  h4: SubtitlelessHeading,
+  h5: SubtitlelessHeading,
+  h6: SubtitlelessHeading,
+  p: Paragraph,
+  ul: (props) => <List {...props} ordered={false} />,
+  ol: (props) => <List {...props} ordered />,
+  blockquote: Blockquote,
   Image: RoundedImage,
   a: CustomLink,
   code: Code,
