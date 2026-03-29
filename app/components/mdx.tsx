@@ -52,13 +52,19 @@ function Paragraph({ children }) {
   return <p className="my-4 text-neutral-700 dark:text-neutral-300">{children}</p>
 }
 
-function List({ children, ordered }) {
+function List({
+  children,
+  ordered,
+}: {
+  children: React.ReactNode
+  ordered?: boolean
+}) {
   let Element = ordered ? 'ol' : 'ul'
   let classes = ordered
     ? 'list-decimal pl-6 space-y-2'
     : 'list-disc pl-6 space-y-2'
 
-  return <Element className={classes}>{children}</Element>
+  return React.createElement(Element, { className: classes }, children)
 }
 
 function Blockquote({ children }) {

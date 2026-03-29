@@ -22,18 +22,34 @@ function parseFrontmatter(fileContent: string) {
     let [key, ...valueArr] = line.split(': ')
     let value = valueArr.join(': ').trim()
     value = value.replace(/^['"](.*)['"]$/, '$1')
-    if (key.trim() === 'hidde') {
+    const parsedKey = key.trim()
+    if (parsedKey === 'hidde') {
       metadata.hidde = value === 'true'
       return
     }
-    if (key.trim() === 'tags') {
+    if (parsedKey === 'tags') {
       metadata.tags = value
         .split(',')
         .map((tag) => tag.trim())
         .filter(Boolean)
       return
     }
-    metadata[key.trim() as keyof Metadata] = value
+    if (parsedKey === 'title') {
+      metadata.title = value
+      return
+    }
+    if (parsedKey === 'publishedAt') {
+      metadata.publishedAt = value
+      return
+    }
+    if (parsedKey === 'summary') {
+      metadata.summary = value
+      return
+    }
+    if (parsedKey === 'image') {
+      metadata.image = value
+      return
+    }
   })
 
   if (metadata.hidde === undefined) {

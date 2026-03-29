@@ -89,7 +89,7 @@ export default function AboutPage() {
             className="group flex h-full flex-col gap-6 section-card transition hover:-translate-y-1 hover:border-neutral-300 dark:hover:border-neutral-700"
           >
             <div className="flex flex-col gap-4">
-              <div className="relative h-56 overflow-hidden rounded-2xl ring-1 ring-neutral-200 dark:ring-neutral-800 sm:h-64">
+              <div className="relative h-56 overflow-hidden rounded-2xl ring-1 ring-[var(--brand-border)] sm:h-64">
                 <Image
                   src={member.imageUrl}
                   alt={member.name}
@@ -101,10 +101,7 @@ export default function AboutPage() {
               </div>
               <div>
                 <h2 className="text-xl font-semibold">{member.name}</h2>
-                <p className="text-sm text-neutral-600 dark:text-neutral-400">
-                  {member.role}
-                </p>
-                <p className="text-sm font-medium text-neutral-700 dark:text-neutral-300">
+                <p className="text-sm font-medium text-[var(--brand-subtle-text)]">
                   {member.focus}
                 </p>
               </div>
@@ -126,7 +123,7 @@ export default function AboutPage() {
             <div className="mt-auto flex flex-wrap items-center gap-3 text-sm">
               <a
                 href={member.socials.linkedin}
-                className="inline-flex items-center gap-2 rounded-full border border-neutral-300 dark:border-neutral-700 px-3 py-2 text-xs font-semibold text-neutral-700 dark:text-neutral-200 transition hover:border-neutral-400 dark:hover:border-neutral-500"
+                className="inline-flex items-center gap-2 rounded-full border border-[var(--brand-border)] bg-[var(--brand-surface)] px-3 py-2 text-xs font-semibold text-[var(--brand-subtle-text)] transition hover:border-[var(--brand-primary)] hover:text-[var(--brand-primary)]"
                 target="_blank"
                 rel="noreferrer"
               >
@@ -135,7 +132,7 @@ export default function AboutPage() {
               </a>
               <a
                 href={member.socials.github}
-                className="inline-flex items-center gap-2 rounded-full border border-neutral-300 dark:border-neutral-700 px-3 py-2 text-xs font-semibold text-neutral-700 dark:text-neutral-200 transition hover:border-neutral-400 dark:hover:border-neutral-500"
+                className="inline-flex items-center gap-2 rounded-full border border-[var(--brand-border)] bg-[var(--brand-surface)] px-3 py-2 text-xs font-semibold text-[var(--brand-subtle-text)] transition hover:border-[var(--brand-primary)] hover:text-[var(--brand-primary)]"
                 target="_blank"
                 rel="noreferrer"
               >
@@ -144,7 +141,7 @@ export default function AboutPage() {
               </a>
               <a
                 href={member.socials.email}
-                className="inline-flex items-center gap-2 rounded-full border border-neutral-300 dark:border-neutral-700 px-3 py-2 text-xs font-semibold text-neutral-700 dark:text-neutral-200 transition hover:border-neutral-400 dark:hover:border-neutral-500"
+                className="inline-flex items-center gap-2 rounded-full border border-[var(--brand-border)] bg-[var(--brand-surface)] px-3 py-2 text-xs font-semibold text-[var(--brand-subtle-text)] transition hover:border-[var(--brand-primary)] hover:text-[var(--brand-primary)]"
               >
                 <EmailIcon />
                 Email
