@@ -9,12 +9,13 @@
   --brand-primary: #602acc;
   --brand-primary-ink: #34146f;
   --brand-accent: #ffbd59;
-  --brand-surface: #ffffff;
-  --brand-muted-surface: #f8f5ff;
-  --brand-border: #e7ddf8;
+  --brand-heading: #2d165e;
+  --brand-surface: #f8f2ff;
+  --brand-muted-surface: #f1e8ff;
+  --brand-border: #d8c6f8;
   --brand-text: #231736;
-  --brand-subtle-text: #6c5c84;
-  --brand-shadow: 0 4px 14px -14px rgba(96, 42, 204, 0.45);
+  --brand-subtle-text: #5d4b78;
+  --brand-shadow: 0 8px 20px -18px rgba(96, 42, 204, 0.38);
   --sh-class: #2d5e9d;
   --sh-identifier: #354150;
   --sh-sign: #8996a3;
@@ -28,19 +29,19 @@
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --brand-surface: #171029;
-    --brand-muted-surface: #1f1538;
-    --brand-border: #38285c;
-    --brand-text: #f4efff;
-    --brand-subtle-text: #c8bae8;
-    --brand-shadow: 0 6px 18px -16px rgba(46, 18, 99, 0.95);
+    --brand-surface: #f8f2ff;
+    --brand-muted-surface: #f1e8ff;
+    --brand-border: #d8c6f8;
+    --brand-text: #231736;
+    --brand-subtle-text: #5d4b78;
+    --brand-shadow: 0 8px 20px -18px rgba(96, 42, 204, 0.38);
     --sh-class: #4c97f8;
     --sh-identifier: white;
     --sh-keyword: #f47067;
     --sh-string: #0fa295;
   }
   html {
-    color-scheme: dark;
+    color-scheme: light;
   }
 }
 
@@ -49,12 +50,28 @@ html {
 }
 
 .bg-brand-canvas {
-  background-color: #f6f2ff;
+  background-color: #f4ecff;
+  background:
+    radial-gradient(circle at 82% 14%, rgba(255, 189, 89, 0.2) 0 26px, transparent 88px),
+    radial-gradient(circle at 18% 76%, rgba(96, 42, 204, 0.12) 0 150px, transparent 240px),
+    linear-gradient(118deg, rgba(96, 42, 204, 0.08) 0%, rgba(96, 42, 204, 0) 50%);
+  background-size: auto;
+  background-position: center;
 }
 
 @media (prefers-color-scheme: dark) {
   .bg-brand-canvas {
-    background-color: #120c22;
+    background-color: #f4ecff;
+  }
+}
+
+@media (max-width: 768px) {
+  .bg-brand-canvas {
+    background:
+      radial-gradient(circle at 84% 12%, rgba(255, 189, 89, 0.18) 0 20px, transparent 72px),
+      radial-gradient(circle at 14% 80%, rgba(96, 42, 204, 0.11) 0 112px, transparent 190px),
+      linear-gradient(118deg, rgba(96, 42, 204, 0.07) 0%, rgba(96, 42, 204, 0) 52%);
+    background-size: auto;
   }
 }
 
@@ -67,7 +84,8 @@ html {
 }
 
 .page-title {
-  @apply font-semibold text-3xl md:text-4xl tracking-tight text-[var(--brand-primary-ink)] dark:text-[var(--brand-text)];
+  @apply font-semibold text-3xl md:text-4xl tracking-tight;
+  color: var(--brand-heading);
 }
 
 .brand-script {
@@ -85,7 +103,7 @@ html {
   @apply rounded-full border px-2.5 py-0.5 text-xs;
   border-color: var(--brand-border);
   color: var(--brand-subtle-text);
-  background-color: var(--brand-muted-surface);
+  background-color: color-mix(in oklab, var(--brand-muted-surface) 82%, white);
 }
 
 .btn-brand {
@@ -136,7 +154,7 @@ html {
 .prose pre {
   @apply rounded-md overflow-x-auto border py-2 px-3 text-sm;
   border-color: var(--brand-border);
-  background-color: var(--brand-muted-surface);
+  background-color: color-mix(in oklab, var(--brand-muted-surface) 86%, white);
 }
 
 .prose code {
@@ -165,18 +183,22 @@ html {
 
 .prose h1 {
   @apply text-4xl font-medium tracking-tight mt-6 mb-2;
+  color: var(--brand-heading);
 }
 
 .prose h2 {
   @apply text-xl font-medium tracking-tight mt-6 mb-2;
+  color: var(--brand-heading);
 }
 
 .prose h3 {
   @apply text-xl font-medium tracking-tight mt-6 mb-2;
+  color: var(--brand-heading);
 }
 
 .prose h4 {
   @apply text-lg font-medium tracking-tight mt-6 mb-2;
+  color: var(--brand-heading);
 }
 
 .prose strong {
@@ -186,10 +208,48 @@ html {
 
 .prose ul {
   @apply list-disc pl-6;
+  color: var(--brand-text);
 }
 
 .prose ol {
   @apply list-decimal pl-6;
+  color: var(--brand-text);
+}
+
+.prose li::marker {
+  color: color-mix(in oklab, var(--brand-primary) 55%, white);
+}
+
+.prose table {
+  width: 100%;
+  border-collapse: collapse;
+  border: 1px solid var(--brand-border);
+  border-radius: 0.5rem;
+  overflow: hidden;
+  background-color: color-mix(in oklab, var(--brand-surface) 88%, white);
+}
+
+.prose th {
+  background-color: color-mix(in oklab, var(--brand-primary) 10%, white);
+  color: var(--brand-heading);
+  font-weight: 600;
+}
+
+.prose th,
+.prose td {
+  padding: 0.5rem 0.75rem;
+  border-bottom: 1px solid var(--brand-border);
+  border-right: 1px solid var(--brand-border);
+  text-align: left;
+}
+
+.prose tr:last-child td {
+  border-bottom: none;
+}
+
+.prose th:last-child,
+.prose td:last-child {
+  border-right: none;
 }
 
 .prose > :first-child {

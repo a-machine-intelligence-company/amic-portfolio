@@ -18,15 +18,15 @@ const services = [
 
 export default function Services() {
   return (
-    <section className="page-section text-neutral-900 dark:text-neutral-100">
+    <section className="page-section text-[var(--brand-text)]">
       <div className="space-y-4">
-        <p className="text-xs uppercase tracking-[0.4em] text-neutral-500">
+        <p className="text-xs uppercase tracking-[0.4em] text-[var(--brand-subtle-text)]">
           Angebot
         </p>
         <h1 className="page-title">
           Leistungen mit Fokus auf Wirkung und Klarheit.
         </h1>
-        <p className="max-w-3xl text-lg text-neutral-700 dark:text-neutral-300">
+        <p className="max-w-3xl text-lg text-[var(--brand-text)]">
           Unternehmen sammeln im täglichen Betrieb Daten über ihre eigenen Tätigkeiten
           und Kompetenzen. Wir helfen Ihnen dabei, Ihre Datenwerte zu analysieren,
           sinnvoll zu strukturieren und einen klaren Handlungsplan anhand Ihrer

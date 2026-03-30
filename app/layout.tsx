@@ -58,14 +58,14 @@ export default function RootLayout({
     <html
       lang="de"
       className={cx(
-        'text-neutral-900 dark:text-neutral-100 bg-brand-canvas',
+        'text-[var(--brand-text)] bg-brand-canvas',
         GeistSans.variable,
         GeistMono.variable,
         grandHotel.variable
       )}
     >
       <body className="antialiased">
-        <main className="page-shell flex-auto min-w-0 mt-6 px-4 sm:px-6">
+        <main className="page-shell relative z-10 flex-auto min-w-0 mt-6 px-4 sm:px-6">
           <Navbar />
           {children}
           <Footer />

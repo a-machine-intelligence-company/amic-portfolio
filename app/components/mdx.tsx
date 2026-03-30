@@ -49,7 +49,7 @@ function RoundedImage(props) {
 }
 
 function Paragraph({ children }) {
-  return <p className="my-4 text-neutral-700 dark:text-neutral-300">{children}</p>
+  return <p className="my-4 text-[var(--brand-text)]">{children}</p>
 }
 
 function List({
@@ -69,7 +69,7 @@ function List({
 
 function Blockquote({ children }) {
   return (
-    <blockquote className="mt-6 rounded-2xl border-l-4 border-neutral-300 bg-neutral-50 p-4 dark:border-neutral-700 dark:bg-neutral-900/40">
+    <blockquote className="mt-6 rounded-2xl border-l-4 border-[var(--brand-border)] bg-[var(--brand-muted-surface)] p-4 text-[var(--brand-text)]">
       {children}
     </blockquote>
   )
@@ -77,7 +77,7 @@ function Blockquote({ children }) {
 
 function SubtitlelessHeading({ children }) {
   return (
-    <p className="my-4 text-neutral-700 dark:text-neutral-300">{children}</p>
+    <p className="my-4 text-[var(--brand-text)]">{children}</p>
   )
 }
 
