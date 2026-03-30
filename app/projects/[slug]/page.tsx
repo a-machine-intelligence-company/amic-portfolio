@@ -92,7 +92,7 @@ export default function Project({ params }) {
         {project.metadata.title}
       </h1>
       <div className="flex flex-wrap items-center justify-between gap-2 text-sm">
-        <p className="text-sm text-neutral-600 dark:text-neutral-400">
+        <p className="text-sm text-[var(--brand-subtle-text)]">
           {formatDate(project.metadata.publishedAt)}
         </p>
         {project.metadata.tags?.length ? (

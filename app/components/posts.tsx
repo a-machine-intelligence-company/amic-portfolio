@@ -18,14 +18,14 @@ export function BlogPosts() {
         .map((post) => (
           <Link
             key={post.slug}
-            className="mb-4 block rounded-2xl border border-neutral-200 dark:border-neutral-800 bg-white dark:bg-neutral-900/30 p-4 transition hover:border-neutral-300 dark:hover:border-neutral-700"
+            className="mb-4 block rounded-2xl border border-[var(--brand-border)] bg-[var(--brand-surface)] p-4 transition hover:-translate-y-0.5 hover:border-[var(--brand-primary)] shadow-[var(--brand-shadow)]"
             href={`/blog/${post.slug}`}
           >
             <div className="w-full flex flex-row flex-wrap gap-x-4">
-              <p className="text-neutral-600 dark:text-neutral-400 w-[100px] tabular-nums whitespace-nowrap">
+              <p className="text-[var(--brand-subtle-text)] w-[100px] tabular-nums whitespace-nowrap">
                 {formatDate(post.metadata.publishedAt, false)}
               </p>
-              <p className="text-neutral-900 dark:text-neutral-100 tracking-tight">
+              <p className="text-[var(--brand-primary-ink)] dark:text-[var(--brand-text)] tracking-tight">
                 {post.metadata.title}
               </p>
             </div>

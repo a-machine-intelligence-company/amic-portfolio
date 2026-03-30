@@ -37,6 +37,12 @@ const toMinutes = (time: string) => {
   return hours * 60 + minutes
 }
 
+const inputClass =
+  'w-full rounded-md border border-[var(--brand-border)] bg-[var(--brand-surface)] px-3 py-2 text-sm text-[var(--brand-text)] outline-none transition focus:border-[var(--brand-primary)] focus-visible:ring-2 focus-visible:ring-[var(--brand-accent)]'
+
+const selectClass =
+  'min-w-[140px] w-full rounded-md border border-[var(--brand-border)] bg-[var(--brand-surface)] px-4 py-2.5 text-base text-[var(--brand-text)] outline-none transition focus:border-[var(--brand-primary)] focus-visible:ring-2 focus-visible:ring-[var(--brand-accent)]'
+
 const Contact: React.FC = () => {
   const [form, setForm] = useState<FormState>(initialState)
   const [status, setStatus] = useState<'idle' | 'sending' | 'success' | 'error'>(
@@ -126,16 +132,16 @@ const Contact: React.FC = () => {
         <h1 className="page-title">
           Wir freuen uns auf Ihre Nachricht.
         </h1>
-        <p className="mt-2 text-neutral-600 dark:text-neutral-400">
+        <p className="mt-2 text-[var(--brand-subtle-text)]">
           Erzaehlen Sie uns kurz von Ihrem Vorhaben. Wir melden uns zeitnah.
         </p>
       </div>
-      <form className="space-y-5" onSubmit={onSubmit}>
+      <form className="section-card space-y-5" onSubmit={onSubmit}>
         <div className="grid gap-4 md:grid-cols-2">
           <label className="space-y-2 text-sm">
             <span className="font-medium">Name</span>
             <input
-              className="w-full rounded-md border border-neutral-200 bg-black px-3 py-2 text-sm text-neutral-100 outline-none transition focus:border-neutral-500 dark:border-neutral-800"
+              className={inputClass}
               name="name"
               type="text"
               required
@@ -146,7 +152,7 @@ const Contact: React.FC = () => {
           <label className="space-y-2 text-sm">
             <span className="font-medium">E-Mail</span>
             <input
-              className="w-full rounded-md border border-neutral-200 bg-black px-3 py-2 text-sm text-neutral-100 outline-none transition focus:border-neutral-500 dark:border-neutral-800"
+              className={inputClass}
               name="email"
               type="email"
               required
@@ -159,7 +165,7 @@ const Contact: React.FC = () => {
           <label className="space-y-2 text-sm">
             <span className="font-medium">Telefon</span>
             <input
-              className="w-full rounded-md border border-neutral-200 bg-black px-3 py-2 text-sm text-neutral-100 outline-none transition focus:border-neutral-500 dark:border-neutral-800"
+              className={inputClass}
               name="phone"
               type="tel"
               value={form.phone}
@@ -170,7 +176,7 @@ const Contact: React.FC = () => {
             <span className="font-medium">Online-Termin (optional)</span>
             <div className="space-y-3">
               <input
-                className="w-full rounded-md border border-neutral-200 bg-black px-3 py-2 text-sm text-neutral-100 outline-none transition focus:border-neutral-500 dark:border-neutral-800"
+                className={inputClass}
                 name="meetingDate"
                 type="date"
                 value={form.meetingDate}
@@ -178,7 +184,7 @@ const Contact: React.FC = () => {
               />
               <div className="grid gap-3 sm:grid-cols-2">
                 <select
-                  className="min-w-[140px] w-full rounded-md border border-neutral-200 bg-black px-4 py-2.5 text-base text-neutral-100 outline-none transition focus:border-neutral-500 dark:border-neutral-800"
+                  className={selectClass}
                   name="meetingFrom"
                   value={form.meetingFrom}
                   onChange={onChange}
@@ -191,7 +197,7 @@ const Contact: React.FC = () => {
                   ))}
                 </select>
                 <select
-                  className="min-w-[140px] w-full rounded-md border border-neutral-200 bg-black px-4 py-2.5 text-base text-neutral-100 outline-none transition focus:border-neutral-500 dark:border-neutral-800"
+                  className={selectClass}
                   name="meetingTo"
                   value={form.meetingTo}
                   onChange={onChange}
@@ -223,7 +229,7 @@ const Contact: React.FC = () => {
         <label className="space-y-2 text-sm">
           <span className="font-medium">Nachricht</span>
           <textarea
-            className="min-h-[140px] w-full rounded-md border border-neutral-200 bg-black px-3 py-2 text-sm text-neutral-100 outline-none transition focus:border-neutral-500 dark:border-neutral-800"
+            className={`${inputClass} min-h-[140px]`}
             name="message"
             required
             value={form.message}
@@ -232,7 +238,7 @@ const Contact: React.FC = () => {
         </label>
         <div className="flex items-center gap-3">
           <button
-            className="rounded-md bg-neutral-900 px-4 py-2 text-sm font-medium text-white transition hover:bg-neutral-700 disabled:cursor-not-allowed disabled:opacity-60 dark:bg-neutral-100 dark:text-neutral-900 dark:hover:bg-white"
+            className="btn-brand rounded-md disabled:cursor-not-allowed disabled:opacity-60"
             type="submit"
             disabled={status === 'sending'}
           >

@@ -17,11 +17,15 @@ function ArrowIcon() {
 
 export default function Footer() {
   return (
-    <footer className="mb-16">
-      <ul className="font-sm mt-8 flex flex-col space-x-0 space-y-2 text-neutral-600 md:flex-row md:space-x-4 md:space-y-0 dark:text-neutral-300">
+    <footer className="mb-12 mt-12 border-t border-[var(--brand-border)] pt-6">
+      <div className="mb-4 flex items-baseline gap-2 text-[var(--brand-primary)]">
+        <p className="brand-script text-4xl leading-none">amic</p>
+        <span className="h-2 w-2 rounded-full bg-[var(--brand-accent)]" />
+      </div>
+      <ul className="mt-3 flex flex-col space-x-0 space-y-2 text-sm text-[var(--brand-subtle-text)] md:flex-row md:space-x-6 md:space-y-0">
         <li>
           <a
-            className="flex items-center transition-all hover:text-neutral-800 dark:hover:text-neutral-100"
+            className="flex items-center transition-all hover:text-[var(--brand-primary)]"
             rel="noopener noreferrer"
             target="_blank"
             href="/rss"
@@ -32,7 +36,7 @@ export default function Footer() {
         </li>
         <li>
           <a
-            className="flex items-center transition-all hover:text-neutral-800 dark:hover:text-neutral-100"
+            className="flex items-center transition-all hover:text-[var(--brand-primary)]"
             rel="noopener noreferrer"
             target="_blank"
             href="https://github.com/vercel/next.js"
@@ -43,7 +47,7 @@ export default function Footer() {
         </li>
         <li>
           <a
-            className="flex items-center transition-all hover:text-neutral-800 dark:hover:text-neutral-100"
+            className="flex items-center transition-all hover:text-[var(--brand-primary)]"
             rel="noopener noreferrer"
             target="_blank"
             href="https://vercel.com/templates/next.js/portfolio-starter-kit"
@@ -53,7 +57,7 @@ export default function Footer() {
           </a>
         </li>
       </ul>
-      <p className="mt-8 text-neutral-600 dark:text-neutral-300">
+      <p className="mt-6 text-sm text-[var(--brand-subtle-text)]">
         © {new Date().getFullYear()} MIT-Lizenz
       </p>
     </footer>

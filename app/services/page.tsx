@@ -18,15 +18,15 @@ const services = [
 
 export default function Services() {
   return (
-    <section className="page-section text-neutral-900 dark:text-neutral-100">
+    <section className="page-section text-[var(--brand-text)]">
       <div className="space-y-4">
-        <p className="text-xs uppercase tracking-[0.4em] text-neutral-500">
+        <p className="text-xs uppercase tracking-[0.4em] text-[var(--brand-subtle-text)]">
           Angebot
         </p>
         <h1 className="page-title">
           Leistungen mit Fokus auf Wirkung und Klarheit.
         </h1>
-        <p className="max-w-3xl text-lg text-neutral-700 dark:text-neutral-300">
+        <p className="max-w-3xl text-lg text-[var(--brand-text)]">
           Unternehmen sammeln im täglichen Betrieb Daten über ihre eigenen Tätigkeiten
           und Kompetenzen. Wir helfen Ihnen dabei, Ihre Datenwerte zu analysieren,
           sinnvoll zu strukturieren und einen klaren Handlungsplan anhand Ihrer
@@ -38,10 +38,10 @@ export default function Services() {
         {services.map((service) => (
           <article
             key={service.title}
-            className="rounded-2xl border border-neutral-200 dark:border-neutral-800 bg-white dark:bg-neutral-900/30 px-5 py-5 transition hover:border-neutral-300 dark:hover:border-neutral-700 hover:bg-white/80 dark:hover:bg-neutral-900/50"
+            className="section-card px-5 py-5 transition hover:-translate-y-0.5 hover:border-[var(--brand-primary)]"
           >
             <h2 className="text-xl font-semibold">{service.title}</h2>
-            <p className="mt-3 text-sm text-neutral-700 dark:text-neutral-300">
+            <p className="mt-3 text-sm text-[var(--brand-subtle-text)]">
               {service.description}
             </p>
           </article>
