@@ -5,19 +5,19 @@ export default function Page() {
     <section className="page-section">
       <div className="space-y-5">
         <p className="text-xs uppercase tracking-[0.3em] text-[var(--brand-subtle-text)]">
-          Data Intelligence
+          Willkommen bei amic.
         </p>
         <h1 className="page-title">
-          Wir entwickeln datengetriebene Loesungen mit messbarer Wirkung.
+          Wir entwickeln datengetriebene Lösungen.
         </h1>
         <p className="text-base text-[var(--brand-subtle-text)]">
-          Wir sind Roman und Severin Weiss und realisieren Projekte im
+          Wir sind ein Team aus Ingenieuren und realisieren Projekte im
           Wechselspiel zwischen maschinellem Lernen, Datenanalysen,
           Nachhaltigkeit und gesellschaftlichem Fortschritt.
         </p>
         <div>
           <Link href="/contact" className="btn-brand">
-            Kontakt aufnehmen
+            Mein Datenpotential jetzt nutzen!
           </Link>
         </div>
       </div>
@@ -28,12 +28,12 @@ export default function Page() {
           </h2>
           <p className="text-sm text-[var(--brand-subtle-text)]">
             Lassen Sie uns Ihr Vorhaben in die Tat umsetzen - schreiben Sie uns,
-            wir freuen uns ueber Ihre Nachricht.
+            wir freuen uns über Ihre Nachricht.
           </p>
         </div>
         <div className="mt-8">
           <h2 className="mb-4 text-xl font-semibold tracking-tight text-[var(--brand-primary-ink)] dark:text-[var(--brand-text)]">
-            Haeufige gestellte Fragen
+            Häufig gestellte Fragen
           </h2>
           <div className="space-y-3">
             <details className="group rounded-lg border border-[var(--brand-border)] bg-[var(--brand-surface)] p-4">
@@ -51,7 +51,7 @@ export default function Page() {
             </details>
             <details className="group rounded-lg border border-[var(--brand-border)] bg-[var(--brand-surface)] p-4">
               <summary className="flex cursor-pointer list-none items-center justify-between text-sm font-medium">
-                <span>Was wird benoetigt um loszulegen?</span>
+                <span>Was wird benötigt um loszulegen?</span>
                 <span className="text-xl transition-transform group-open:rotate-45">
                   +
                 </span>
@@ -63,14 +63,14 @@ export default function Page() {
             </details>
             <details className="group rounded-lg border border-[var(--brand-border)] bg-[var(--brand-surface)] p-4">
               <summary className="flex cursor-pointer list-none items-center justify-between text-sm font-medium">
-                <span>Wie schnell koennt ihr starten?</span>
+                <span>Wie schnell könnt ihr starten?</span>
                 <span className="text-xl transition-transform group-open:rotate-45">
                   +
                 </span>
               </summary>
               <p className="mt-3 text-sm text-[var(--brand-subtle-text)]">
-                In der Regel innerhalb weniger Wochen - abhaengig von Umfang
-                und Verfuegbarkeit.
+                In der Regel innerhalb weniger Wochen - abhängig von Umfang
+                und Verfügbarkeit.
               </p>
             </details>
             <details className="group rounded-lg border border-[var(--brand-border)] bg-[var(--brand-surface)] p-4">
@@ -81,8 +81,8 @@ export default function Page() {
                 </span>
               </summary>
               <p className="mt-3 text-sm text-[var(--brand-subtle-text)]">
-                Am besten ueber die Kontaktseite - wir melden uns zeitnah
-                zurueck.
+                Am besten über die Kontaktseite - wir melden uns zeitnah
+                zurück.
               </p>
             </details>
           </div>
