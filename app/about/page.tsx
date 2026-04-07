@@ -69,16 +69,15 @@ function EmailIcon() {
 export default function AboutPage() {
   return (
     <section className="page-section text-[var(--brand-text)]">
-      <div className="relative space-y-4">
+      <div className="relative max-w-3xl space-y-4">
         <p className="text-xs uppercase tracking-[0.4em] text-[var(--brand-subtle-text)]">
           Über uns
         </p>
         <h1 className="text-4xl font-semibold tracking-tight md:text-5xl">
           Wir gestalten Produkte und Entscheidungen durch Daten.
         </h1>
-        <p className="max-w-3xl text-lg text-[var(--brand-text)]">
-          Wir sind ein kleines Team mit Fokus auf datenbasierten Systemen um die
-          Prozesse, Entscheidungen und Produkte unserer Auftraggeber zu verbessern.
+        <p className="page-copy text-[var(--brand-text)]">
+          Wir sind ein kleines Team mit Fokus auf datenbasierten Systemen um die Prozesse, Entscheidungen und Produkte unserer Auftraggeber zu verbessern.
         </p>
       </div>
 
@@ -107,7 +106,7 @@ export default function AboutPage() {
               </div>
             </div>
 
-            <p className="text-[var(--brand-text)]">{member.bio}</p>
+            <p className="page-copy-compact text-[var(--brand-text)]">{member.bio}</p>
 
             <div className="flex flex-wrap gap-2">
               {member.traits.map((trait) => (
@@ -161,12 +160,12 @@ export default function AboutPage() {
               Klarheit, Wirkung, Nachhaltigkeit
             </h3>
           </div>
-          <div className="text-sm text-[var(--brand-text)]">
+          <div className="page-copy-compact text-[var(--brand-text)]">
             Wir charakterisieren Teams nicht nur über Rollen, sondern über die
             Wirkung, die sie liefern: klare Erkenntnisse, belastbare Systeme und
             messbare Fortschritte.
           </div>
-          <div className="text-sm text-[var(--brand-text)]">
+          <div className="page-copy-compact text-[var(--brand-text)]">
             Diese Haltung übersetzen wir in Projekte, die Menschen und Prozesse
             verbinden und langfristig tragfähig sind.
           </div>

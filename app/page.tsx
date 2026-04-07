@@ -3,14 +3,14 @@ import Link from 'next/link'
 export default function Page() {
   return (
     <section className="page-section">
-      <div className="space-y-5">
+      <div className="max-w-3xl space-y-5">
         <p className="text-xs uppercase tracking-[0.3em] text-[var(--brand-subtle-text)]">
           Willkommen bei amic.
         </p>
         <h1 className="page-title">
           Wir entwickeln datengetriebene Lösungen.
         </h1>
-        <p className="text-base text-[var(--brand-subtle-text)]">
+        <p className="page-copy text-[var(--brand-subtle-text)]">
           Wir sind ein Team aus Ingenieuren und realisieren Projekte im
           Wechselspiel zwischen maschinellem Lernen, Datenanalysen,
           Nachhaltigkeit und gesellschaftlichem Fortschritt.
@@ -26,7 +26,7 @@ export default function Page() {
           <h2 className="text-lg font-semibold tracking-tight text-[var(--brand-primary-ink)] dark:text-[var(--brand-text)]">
             Kontakt
           </h2>
-          <p className="text-sm text-[var(--brand-subtle-text)]">
+          <p className="page-copy-compact text-[var(--brand-subtle-text)]">
             Lassen Sie uns Ihr Vorhaben in die Tat umsetzen - schreiben Sie uns,
             wir freuen uns über Ihre Nachricht.
           </p>
@@ -43,7 +43,7 @@ export default function Page() {
                   +
                 </span>
               </summary>
-              <p className="mt-3 text-sm text-[var(--brand-subtle-text)]">
+              <p className="page-copy-compact mt-3 text-[var(--brand-subtle-text)]">
                 Wir arbeiten an praxisnahen Anwendungen rund um Daten und
                 maschinelles Lernen - von Strategieentwicklung, Prototypen bis
                 zu produktiven Loesungen.
@@ -56,7 +56,7 @@ export default function Page() {
                   +
                 </span>
               </summary>
-              <p className="mt-3 text-sm text-[var(--brand-subtle-text)]">
+              <p className="page-copy-compact mt-3 text-[var(--brand-subtle-text)]">
                 Teilen Sie uns Ihre Projektidee und Anforderungen mit - wir
                 begleiten Sie von der Vision bis zur Umsetzung.
               </p>
@@ -68,7 +68,7 @@ export default function Page() {
                   +
                 </span>
               </summary>
-              <p className="mt-3 text-sm text-[var(--brand-subtle-text)]">
+              <p className="page-copy-compact mt-3 text-[var(--brand-subtle-text)]">
                 In der Regel innerhalb weniger Wochen - abhängig von Umfang
                 und Verfügbarkeit.
               </p>
@@ -80,7 +80,7 @@ export default function Page() {
                   +
                 </span>
               </summary>
-              <p className="mt-3 text-sm text-[var(--brand-subtle-text)]">
+              <p className="page-copy-compact mt-3 text-[var(--brand-subtle-text)]">
                 Am besten über die Kontaktseite - wir melden uns zeitnah
                 zurück.
               </p>
