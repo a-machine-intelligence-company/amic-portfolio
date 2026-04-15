@@ -88,6 +88,20 @@ html {
   color: var(--brand-heading);
 }
 
+.page-copy {
+  width: 100%;
+  font-size: 1.05rem;
+  line-height: 1.7;
+  text-wrap: pretty;
+}
+
+.page-copy-compact {
+  width: 100%;
+  font-size: 0.975rem;
+  line-height: 1.65;
+  text-wrap: pretty;
+}
+
 .brand-script {
   font-family: var(--font-brand), cursive;
 }

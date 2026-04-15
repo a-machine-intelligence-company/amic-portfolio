@@ -128,12 +128,12 @@ const Contact: React.FC = () => {
 
   return (
     <section className="page-section">
-      <div>
+      <div className="max-w-3xl">
         <h1 className="page-title">
           Wir freuen uns auf Ihre Nachricht.
         </h1>
-        <p className="mt-2 text-[var(--brand-subtle-text)]">
-          Erzaehlen Sie uns kurz von Ihrem Vorhaben. Wir melden uns zeitnah.
+        <p className="page-copy mt-2 text-[var(--brand-subtle-text)]">
+          Erzählen Sie uns kurz von Ihrem Vorhaben. Wir melden uns zeitnah.
         </p>
       </div>
       <form className="section-card space-y-5" onSubmit={onSubmit}>

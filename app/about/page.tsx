@@ -77,8 +77,7 @@ export default function AboutPage() {
           Wir gestalten Produkte und Entscheidungen durch Daten.
         </h1>
         <p className="max-w-3xl text-lg text-[var(--brand-text)]">
-          Wir sind ein kleines Team mit Fokus auf datenbasierten Systemen um die
-          Prozesse, Entscheidungen und Produkte unserer Auftraggeber zu verbessern.
+          Wir sind ein kleines Team mit Fokus auf datenbasierten Systemen um die Prozesse, Entscheidungen und Produkte unserer Auftraggeber zu verbessern.
         </p>
       </div>
 
