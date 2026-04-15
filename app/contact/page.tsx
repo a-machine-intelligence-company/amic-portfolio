@@ -133,7 +133,7 @@ const Contact: React.FC = () => {
           Wir freuen uns auf Ihre Nachricht.
         </h1>
         <p className="page-copy mt-2 text-[var(--brand-subtle-text)]">
-          Erzaehlen Sie uns kurz von Ihrem Vorhaben. Wir melden uns zeitnah.
+          Erzählen Sie uns kurz von Ihrem Vorhaben. Wir melden uns zeitnah.
         </p>
       </div>
       <form className="section-card space-y-5" onSubmit={onSubmit}>
