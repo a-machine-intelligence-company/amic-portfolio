@@ -11,9 +11,9 @@ export default function Page() {
           Wir entwickeln datengetriebene Lösungen.
         </h1>
         <p className="page-copy text-[var(--brand-subtle-text)]">
-          Wir sind ein Team aus Ingenieuren und realisieren Projekte im
-          Wechselspiel zwischen maschinellem Lernen, Datenanalysen,
-          Nachhaltigkeit und gesellschaftlichem Fortschritt.
+          Benötigen Sie Unterstützung bei der Umsetzung von datenbasierten Projekten? 
+          Fragen Sie sich, wie Sie das volle Potential Ihrer Daten ausschöpfen können?
+          Wir helfen Ihnen dabei, Ihre Daten in wertvolle Erkenntnisse und Produkte zu verwandeln.
         </p>
         <div>
           <Link href="/contact" className="btn-brand">
