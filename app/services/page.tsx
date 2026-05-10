@@ -26,9 +26,8 @@ const steps = [
     title: 'Massnahmen & Umsetzung',
     lead: 'Wir entwickeln einen passgenauen Handlungsplan — von der Konzeptphase über den Architekturaufbau bis zur Implementierung.',
     questions: [
-      'Was?',
-      'In welcher Zeit?',
-      'Zu welchem Zweck?',
+      'Konkretisierung der Massnahmen.',
+      'Ressourcenplanung: Wer macht was bis wann?'
     ],
   },
   {
@@ -120,6 +119,18 @@ export default function Services() {
             </div>
           )
         })}
+      </div>
+
+      <div className="section-card flex flex-col items-start gap-4 sm:flex-row sm:items-center sm:justify-between">
+        <div>
+          <p className="font-semibold text-[var(--brand-heading)]">Bereit für den ersten Schritt?</p>
+          <p className="page-copy-compact text-[var(--brand-subtle-text)] mt-0.5">
+            Nehmen Sie Kontakt auf — wir melden uns innerhalb von 24 Stunden.
+          </p>
+        </div>
+        <a href="/contact" className="btn-brand shrink-0">
+          Jetzt Kontakt aufnehmen
+        </a>
       </div>
     </section>
   )
