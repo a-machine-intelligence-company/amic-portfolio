@@ -4,12 +4,12 @@ const teamMembers = [
   {
     name: 'Roman Weiss',
     // role: 'Romans Rolle',
-    focus: 'datenbasierte Optimierung & modellbasierte Entscheidungen',
+    //focus: 'datenbasierte Optimierung & modellbasierte Entscheidungen',
     bio:
       'Arbeitet an der Schnittstelle von Modellierung, Datenanalyse und Praxis, um fundierte und robuste Entscheidungen zu ermöglichen.',
     traits: ['Strukturiert', 'Neugierig', 'Praxisnah'],
     imageUrl: '/about/roman.jpg',
-    imagePosition: 'center 28%',
+    imagePosition: 'center 42%',
     socials: {
       linkedin: 'https://www.linkedin.com/in/roman-weiss-69929a303/?trk=opento_sprofile_details',
       github: 'https://github.com/romanweiss123',
@@ -19,10 +19,10 @@ const teamMembers = [
   {
     name: 'Severin Weiss',
     // role: 'Systems Builder',
-    focus: 'Datenprodukte & KI Verständlichkeit',
+    //focus: 'Datenprodukte & KI Verständlichkeit',
     bio:
       'Entwickelt robuste Algorithmen und Monitoring, damit Datenprodukte zuverlässig wachsen und verständlich werden.',
-    traits: ['Lösungsorientiert', 'Individuell', 'Ganzheitlich'],
+    traits: ['Analytisch', 'Individuell', 'Lösungsorientiert'],
     imageUrl: '/about/severin.jpg',
     imagePosition: 'center 42%',
     socials: {
